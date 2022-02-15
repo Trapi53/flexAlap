@@ -1,0 +1,68 @@
+@charset "utf-8";
+
+header, nav, footer, article, section, aside, main{
+    border: 1px solid gray;
+    padding: 10px;
+}
+
+article header{
+    background: red;
+}
+article{
+    background: darkgray;
+    color: white;
+}
+
+section{
+    display: flex;
+    /*flex-direction: row;
+    flex-wrap: wrap;*/
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    /*flex-direction: column;*/
+    gap: 10px;
+}
+section article{
+    /*flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 200px;*/
+    flex: 1 1 200px;
+}
+/*section article:nth-child(1){
+    order: 5;
+}*/
+/*MENU*/
+nav a{
+    display: inline-block;
+    padding: 5px;
+    text-decoration: none;
+    color: red;
+    border-left: 1px solid gray;
+}
+#listaval{
+    display: flex;
+    justify-content: space-between;
+}
+#listaval ul{
+    padding: 0;
+    list-style-type: none;
+}
+#listaval #menu{
+    display: flex;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:700px){
+    section{
+        flex-direction: column ;
+    }
+}
